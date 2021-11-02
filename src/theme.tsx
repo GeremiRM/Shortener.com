@@ -15,6 +15,11 @@ const breakpoints = createBreakpoints({
 const theme = extendTheme({
   colors: {
     black: "#16161D",
+    bgCyan: "hsl(180, 66%, 49%)",
+    bgDarkViolet: "hsl(257, 27%, 26%)",
+    darkRed: "hsl(0, 87%, 67%)",
+
+    textGray: "hsl(0, 0%, 75%)",
   },
   fonts,
   breakpoints,
