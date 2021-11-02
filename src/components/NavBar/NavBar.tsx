@@ -10,6 +10,7 @@ import {
   StackDivider,
 } from "@chakra-ui/react";
 import { HamburgerIcon, CloseIcon } from "@chakra-ui/icons";
+import { Wrapper } from "../Wrapper";
 
 const NavLinks = ["Features", "Pricing", "Resources"];
 
@@ -25,13 +26,8 @@ export const NavBar: React.FC<{}> = ({}) => {
   };
 
   return (
-    <>
-      <Flex
-        align={"center"}
-        justifyContent={"space-between"}
-        w={"85%"}
-        mx={"7.5%"}
-      >
+    <Wrapper width="100%" px="5%">
+      <Flex align={"center"} justifyContent={"space-between"}>
         <img src="images/logo.svg" alt="Shortly Logo" />
         <Box>
           <IconButton
@@ -50,8 +46,8 @@ export const NavBar: React.FC<{}> = ({}) => {
               color={"white"}
               position={"absolute"}
               left={0}
-              w={"85%"}
-              mx={"7.5%"}
+              w={"90%"}
+              mx={"5%"}
               mt={8}
               borderRadius={12}
               textAlign="center"
@@ -77,6 +73,6 @@ export const NavBar: React.FC<{}> = ({}) => {
           ) : null}
         </Box>
       </Flex>
-    </>
+    </Wrapper>
   );
 };

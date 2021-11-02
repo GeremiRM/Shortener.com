@@ -21,8 +21,12 @@ export const InputField: React.FC<InputFieldProps> = ({
         {...field}
         {...props}
         id={field.name}
+        backgroundColor={"white"}
         placeholder={props.placeholder}
-        _invalid={{ borderColor: "darkRed" }}
+        _invalid={{
+          borderColor: "darkRed",
+          _placeholder: { color: "hsl(0, 87%, 85%)" },
+        }}
         border={"3px solid transparent"}
         pl="0.75rem"
       />

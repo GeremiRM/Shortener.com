@@ -15,5 +15,9 @@ interface ButtonProps {
 }
 
 export const ButtonComp: React.FC<ButtonProps> = ({ text, ...props }) => {
-  return <Button {...props}>{text}</Button>;
+  return (
+    <Button {...props} fontSize="18px">
+      {text}
+    </Button>
+  );
 };

@@ -15,8 +15,14 @@ interface Links {
 export const ShrtsList: React.FC<ShrtsListProps> = ({ links }) => {
   return (
     <Wrapper width="100%" px="5%">
-      <Box maxH="600px" overflowY={"scroll"} mt="8">
-        <Stack spacing="6" pb="2rem">
+      <Box
+        maxH="600px"
+        overflowY={"scroll"}
+        mt="8"
+        mb="3.5rem"
+        boxShadow={"inner"}
+      >
+        <Stack spacing="6">
           {links.map(({ original, shortened }) => (
             <ShrtsListCard
               original={original}

@@ -16,7 +16,7 @@ export const ShrtsListCard: React.FC<ShrtsListCardProps> = ({
       <Text p="3.5" overflow={"hidden"} isTruncated>
         {original}
       </Text>
-      <Stack p="3.5" borderTop={"1px solid black"}>
+      <Stack p="3.5" borderTop={"1px solid hsl(257, 7%, 85%)"}>
         <Text color="bgCyan">{shrt}</Text>
         <ButtonComp bgColor="bgCyan" text="Copy" color="white"></ButtonComp>
       </Stack>

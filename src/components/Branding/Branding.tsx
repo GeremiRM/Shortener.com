@@ -8,14 +8,14 @@ export const Branding: React.FC<{}> = ({}) => {
       <Box
         bg="url(../images/illustration-working.svg) left/cover no-repeat"
         position="relative"
-        left="7.5%"
+        left="5%"
         w="100%"
         h="350px"
         zIndex={-1}
-        mb={5}
+        mb={10}
       ></Box>
       <Stack
-        spacing={5}
+        spacing={3}
         mb="20"
         width="85%"
         mx="auto"
@@ -29,11 +29,11 @@ export const Branding: React.FC<{}> = ({}) => {
           size="2xl"
           fontFamily={"inherit"}
           fontWeight={700}
-          color="- Grayish Violet: hsl(257, 7%, 63%)"
+          color="hsl(255, 11%, 22%)"
         >
           More than just shorter links
         </Heading>
-        <Text color="hsl(257, 7%, 63%)" pb="2">
+        <Text color="hsl(257, 7%, 63%)" pb="2" lineHeight={"2rem"}>
           Build your brand's recognition and get detailed insights on how your
           links are performing.
         </Text>
@@ -43,7 +43,7 @@ export const Branding: React.FC<{}> = ({}) => {
           width="60%"
           text="Get Started"
           borderRadius="50"
-          padding="1.75rem"
+          padding="1.5rem"
           fontWeight={700}
         ></ButtonComp>
       </Stack>
