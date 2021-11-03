@@ -13,8 +13,14 @@ interface Links {
 }
 
 export const ShrtsList: React.FC<ShrtsListProps> = ({ links }) => {
+  const renderLinks = () => {
+    return links.map(({ original, shortened }, idx) => (
+      <ShrtsListCard original={original} shrt={shortened} key={idx} />
+    ));
+  };
+
   return (
-    <Wrapper width="100%" px="5%">
+    <Wrapper>
       <Box
         maxH="600px"
         overflowY={"scroll"}
@@ -22,15 +28,7 @@ export const ShrtsList: React.FC<ShrtsListProps> = ({ links }) => {
         mb="3.5rem"
         boxShadow={"inner"}
       >
-        <Stack spacing="6">
-          {links.map(({ original, shortened }) => (
-            <ShrtsListCard
-              original={original}
-              shrt={shortened}
-              key={original}
-            />
-          ))}
-        </Stack>
+        <Stack spacing="6">{renderLinks()}</Stack>
       </Box>
     </Wrapper>
   );

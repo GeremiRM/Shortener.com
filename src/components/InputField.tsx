@@ -7,6 +7,7 @@ type InputFieldProps = InputHTMLAttributes<HTMLInputElement> & {
   padding?: string;
   mb?: string;
   w?: string;
+  flex?: string;
 };
 
 export const InputField: React.FC<InputFieldProps> = ({
@@ -31,7 +32,12 @@ export const InputField: React.FC<InputFieldProps> = ({
         pl="0.75rem"
       />
       {error ? (
-        <FormErrorMessage mt="1" color={"darkRed"} fontStyle={"italic"}>
+        <FormErrorMessage
+          mt="1"
+          color={"darkRed"}
+          fontStyle={"italic"}
+          position={{ sm: "absolute" }}
+        >
           {error}
         </FormErrorMessage>
       ) : null}

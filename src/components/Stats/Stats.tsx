@@ -25,21 +25,26 @@ export const Stats: React.FC<{}> = ({}) => {
   };
 
   return (
-    <Wrapper width="100%" px="5%">
+    <Wrapper>
       <Box textAlign={"center"} fontFamily={"serif"} pb="4rem">
-        <Stack spacing={4}>
+        <Stack spacing={4} alignItems={"center"}>
           <Heading
             as="h2"
             fontWeight={700}
             fontFamily={"serif"}
-            fontSize="1.75rem"
+            fontSize={{ base: "1.75rem", md: "2.5rem" }}
             color="hsl(255, 11%, 22%)"
           >
             Advanced Statistics
           </Heading>
-          <Text fontSize="16px" color="hsl(257, 7%, 63%)" lineHeight="1.75rem">
-            Track how your links are performing across the web with oout
-            advanced statistics dashboard
+          <Text
+            fontSize="16px"
+            color="hsl(257, 7%, 63%)"
+            lineHeight="1.75rem"
+            maxW="450px"
+          >
+            Track how your links are performing across the web with out advanced
+            statistics dashboard
           </Text>
           <Flex direction="column" align={"center"} justify={"center"}>
             {renderCards()}

@@ -15,6 +15,7 @@ export const StatsCard: React.FC<StatsCardProps> = ({ img, heading, desc }) => {
         align={"center"}
         position={"relative"}
         zIndex={10}
+        maxW="500px"
       >
         <Box
           bg="bgDarkViolet"

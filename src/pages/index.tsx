@@ -21,7 +21,7 @@ const Index: React.FC<{}> = ({}) => {
 
   const shortenLink = async (link: string) => {
     const response = await fetch(
-      `https://api.shrtco.de/v2/shorten?url=${link}/very/long/link.html`
+      `https://api.shrtco.de/v2/shorten?url=${link}`
     ).catch(() => alert("ERROR"));
 
     if (response) {

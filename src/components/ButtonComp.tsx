@@ -10,8 +10,10 @@ interface ButtonProps {
   fontWeight?: number;
   type?: "submit" | "button";
   disabled?: boolean;
-  width?: string;
+  width?: any;
   isLoading?: boolean;
+  onCopy?: any;
+  height?: string;
 }
 
 export const ButtonComp: React.FC<ButtonProps> = ({ text, ...props }) => {

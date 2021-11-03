@@ -1,5 +1,5 @@
 import React from "react";
-import { Box, Flex, Heading, Grid, Image, HStack } from "@chakra-ui/react";
+import { Box, Flex, Heading, Grid, Image, Stack } from "@chakra-ui/react";
 import { Wrapper } from "../Wrapper";
 import { FOOTER_LINKS } from "./FooterLinksList";
 import { FooterLinks } from "./FooterLinks";
@@ -17,38 +17,44 @@ export const Footer: React.FC<{}> = ({}) => {
   };
 
   return (
-    <Wrapper bg="hsl(255, 11%, 22%)" width="100%">
-      <Flex
-        direction={{ base: "column", sm: "column" }}
-        color="white"
-        textAlign="center"
-        py="2rem"
-      >
-        <Heading
-          as="h3"
-          fontSize="2rem"
-          fontFamily={"Poppins"}
-          fontWeight="700"
-          py="1rem"
+    <Box bg="hsl(255, 11%, 22%)">
+      <Wrapper>
+        <Flex
+          direction={{ base: "column", sm: "column" }}
+          color="white"
+          textAlign="center"
+          py="2rem"
         >
-          Shortly
-        </Heading>
-        <Grid>
-          {renderLinks()}
-          <HStack
-            align={"center"}
-            justify={"center"}
-            pt="3rem"
-            pb="1.5rem"
-            spacing={"1.5rem"}
+          <Heading
+            as="h3"
+            fontSize="2rem"
+            fontFamily={"Poppins"}
+            fontWeight="700"
+            py="1rem"
           >
-            <Image href="#" src="/images/icon-facebook.svg" />
-            <Image href="#" src="/images/icon-twitter.svg" />
-            <Image href="#" src="/images/icon-pinterest.svg" />
-            <Image href="#" src="/images/icon-instagram.svg" />
-          </HStack>
-        </Grid>
-      </Flex>
-    </Wrapper>
+            Shortly
+          </Heading>
+          <Grid templateColumns={{ sm: "repeat(2, 1fr)" }}>
+            {renderLinks()}
+            <Stack
+              align={"center"}
+              justify={"space-evenly"}
+              pt="4rem"
+              pb={{ base: "1.5rem", sm: "0`" }}
+              direction={{ sm: "column" }}
+              width="40%"
+              maxW={"400px"}
+              mx="auto"
+              spacing={"1.75rem"}
+            >
+              <Image href="#" src="/images/icon-facebook.svg" />
+              <Image href="#" src="/images/icon-twitter.svg" />
+              <Image href="#" src="/images/icon-pinterest.svg" />
+              <Image href="#" src="/images/icon-instagram.svg" />
+            </Stack>
+          </Grid>
+        </Flex>
+      </Wrapper>
+    </Box>
   );
 };

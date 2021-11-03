@@ -6,6 +6,7 @@ interface WrapperProps {
   px?: string;
   py?: string;
   bg?: string;
+  mx?: string;
 }
 
 export const Wrapper: React.FC<WrapperProps> = ({ children, ...props }) => {
