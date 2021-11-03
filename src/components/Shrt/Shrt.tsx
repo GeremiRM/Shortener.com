@@ -68,7 +68,7 @@ export const Shrt: React.FC<ShrtProps> = ({ shortenLink }) => {
                       text="Shorten It!"
                       type="submit"
                       isLoading={isSubmitting}
-                      width={{ lg: "200px" }}
+                      width={{ base: "100%", md: "200px" }}
                       padding={{ base: "1.5rem", md: "calc(2rem + 3px)" }}
                       height="55px"
                     ></ButtonComp>

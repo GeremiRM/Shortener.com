@@ -9,6 +9,8 @@ export const Branding: React.FC<{}> = ({}) => {
       mt={{ base: 5, md: 20 }}
       mb={{ base: 10, md: 20 }}
       direction={{ base: "column", md: "row-reverse" }}
+      position="relative"
+      animation="appear ease-in 2s"
     >
       <Box
         bg="url(../images/illustration-working.svg) no-repeat"
@@ -19,8 +21,6 @@ export const Branding: React.FC<{}> = ({}) => {
         w={{ base: "450px", md: "800px", xl: "70vw" }}
         minH={{ base: "300px", md: "none", xl: "500px" }}
         mx="auto"
-        // maxH={{ md: "400px", xl: "500px" }}
-        // maxW={{ lg: "550px" }}
         zIndex={-1}
       ></Box>
       <Box pl={{ base: "5%", lg: "10%" }}>

@@ -1,18 +1,30 @@
-import React from "react";
+import React, { useEffect } from "react";
 import { Box, Heading, Text, Stack, Grid } from "@chakra-ui/react";
 import { Wrapper } from "../Wrapper";
 import { StatsCard } from "./StatsCard";
 
 import { CARDS_INFO } from "./StatsCardsInfo";
 
+import Aos from "aos";
+import "aos/dist/aos.css";
+
 export const Stats: React.FC<{}> = ({}) => {
   const renderCards = () => {
     return CARDS_INFO.map((card, idx) => (
-      <Box key={card.heading} position="relative" mt={20}>
+      <Box
+        key={card.heading}
+        position="relative"
+        mt={20}
+        data-aos={`${idx % 2 === 0 ? "slide-left" : "slide-right"}`}
+      >
         <StatsCard {...card} idx={idx} />
       </Box>
     ));
   };
+
+  useEffect(() => {
+    Aos.init({ duration: 1000, offset: 200 });
+  }, []);
 
   return (
     <Wrapper>
@@ -43,6 +55,7 @@ export const Stats: React.FC<{}> = ({}) => {
               top={{ base: "10%", lg: "55%" }}
               left={{ base: "calc(50% - 4px)", lg: "0" }}
               bg={"bgCyan"}
+              data-aos="slide-up"
             ></Box>
             <Grid
               gridTemplateColumns={{ base: "1fr", lg: "repeat(3, 1fr)" }}
