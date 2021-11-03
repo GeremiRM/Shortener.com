@@ -20,9 +20,11 @@ export const Footer: React.FC<{}> = ({}) => {
     <Box bg="hsl(255, 11%, 22%)">
       <Wrapper>
         <Flex
-          direction={{ base: "column", sm: "column" }}
+          direction={{ base: "column", lg: "row" }}
+          align={{ lg: "center" }}
+          justify={{ lg: "space-between" }}
           color="white"
-          textAlign="center"
+          textAlign={{ base: "center", lg: "left" }}
           py="2rem"
         >
           <Heading
@@ -31,21 +33,25 @@ export const Footer: React.FC<{}> = ({}) => {
             fontFamily={"Poppins"}
             fontWeight="700"
             py="1rem"
+            flex={1}
           >
             Shortly
           </Heading>
-          <Grid templateColumns={{ sm: "repeat(2, 1fr)" }}>
+          <Grid
+            templateColumns={{ sm: "repeat(2, 1fr)", lg: "repeat(4, 1fr)" }}
+            flex={2}
+          >
             {renderLinks()}
             <Stack
-              align={"center"}
+              align={{ sm: "center", lg: "flex-start" }}
               justify={"space-evenly"}
               pt="4rem"
               pb={{ base: "1.5rem", sm: "0`" }}
-              direction={{ sm: "column" }}
+              direction={{ sm: "column", lg: "row" }}
               width="40%"
               maxW={"400px"}
               mx="auto"
-              spacing={"1.75rem"}
+              spacing={{ base: "1.75rem", lg: "1.25rem" }}
             >
               <Image href="#" src="/images/icon-facebook.svg" />
               <Image href="#" src="/images/icon-twitter.svg" />

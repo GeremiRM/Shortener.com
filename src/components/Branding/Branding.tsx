@@ -1,28 +1,34 @@
 import React from "react";
 import { Box, Text, Heading, Stack, Flex } from "@chakra-ui/react";
 import { ButtonComp } from "../ButtonComp";
-import { Wrapper } from "../Wrapper";
 
 export const Branding: React.FC<{}> = ({}) => {
   return (
     <Flex
       overflow={"hidden"}
-      mt="5"
-      direction={{ base: "column", sm: "row-reverse" }}
+      mt={{ base: 5, md: 20 }}
+      mb={{ base: 10, md: 20 }}
+      direction={{ base: "column", md: "row-reverse" }}
     >
       <Box
-        bg="url(../images/illustration-working.svg) left/cover no-repeat"
+        bg="url(../images/illustration-working.svg) no-repeat"
+        bgSize={{ base: "contain", md: "cover" }}
+        bgPosition={{ base: "right", md: "left" }}
         position="relative"
-        left="5%"
-        w="100%"
-        height={{ base: "300px", sm: "50vw", md: "600px" }}
+        left={{ base: "5%", md: "0" }}
+        w={{ base: "450px", md: "800px", xl: "70vw" }}
+        minH={{ base: "300px", md: "none", xl: "500px" }}
+        mx="auto"
+        // maxH={{ md: "400px", xl: "500px" }}
+        // maxW={{ lg: "550px" }}
         zIndex={-1}
-        mb={10}
       ></Box>
-      <Wrapper px="5%">
+      <Box pl={{ base: "5%", lg: "10%" }}>
         <Stack
-          spacing={{ base: 3, sm: 6 }}
-          mb="20"
+          spacing={{ base: 3 }}
+          mt="10"
+          mb={{ base: "20", xl: "10" }}
+          pb={{ xl: 100 }}
           mx="auto"
           textAlign={{ base: "center", md: "left" }}
           display={"flex"}
@@ -32,14 +38,20 @@ export const Branding: React.FC<{}> = ({}) => {
         >
           <Heading
             as="h1"
-            fontSize={{ base: "2.5rem", md: "3.5rem" }}
+            fontSize={{ base: "2.5rem", md: "5xl", lg: "5vw" }}
             fontFamily={"inherit"}
             fontWeight={700}
             color="hsl(255, 11%, 22%)"
           >
             More than just shorter links
           </Heading>
-          <Text color="hsl(257, 7%, 63%)" pb="2" lineHeight={"2rem"}>
+          <Text
+            color="hsl(257, 7%, 63%)"
+            pb="2"
+            lineHeight={"2rem"}
+            fontSize={{ base: "18px", lg: "20px" }}
+            maxW="500px"
+          >
             Build your brand's recognition and get detailed insights on how your
             links are performing.
           </Text>
@@ -53,7 +65,7 @@ export const Branding: React.FC<{}> = ({}) => {
             fontWeight={700}
           ></ButtonComp>
         </Stack>
-      </Wrapper>
+      </Box>
     </Flex>
   );
 };

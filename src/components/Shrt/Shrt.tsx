@@ -14,7 +14,7 @@ const LINK_RGX =
 
 export const Shrt: React.FC<ShrtProps> = ({ shortenLink }) => {
   return (
-    <Box bg="linear-gradient(180deg, white 50%, hsl(257, 7%, 93%) 50%);">
+    <Box bg={"linear-gradient(180deg, white 50%, hsl(257, 7%, 93%) 50%);"}>
       <Wrapper>
         <Formik
           initialValues={{ link: "" }}
@@ -36,10 +36,13 @@ export const Shrt: React.FC<ShrtProps> = ({ shortenLink }) => {
         >
           {({ isSubmitting }) => (
             <Box
-              bg="url('/images/bg-shorten-mobile.svg') no-repeat top right"
-              backgroundColor={"bgDarkViolet"}
-              p={{ base: "1.5rem", sm: "2rem" }}
-              borderRadius={12}
+              bg={{
+                base: "url('/images/bg-shorten-mobile.svg') no-repeat top right",
+                md: "url('/images/bg-shorten-desktop.svg') no-repeat top left/cover",
+              }}
+              backgroundColor={{ base: "bgDarkViolet", md: "bgDarkViolet" }}
+              p={{ base: "1.5rem", sm: "2rem", lg: "2.5rem 3.5rem" }}
+              borderRadius={{ base: 12, md: 8 }}
             >
               <Form>
                 <Flex
@@ -54,7 +57,7 @@ export const Shrt: React.FC<ShrtProps> = ({ shortenLink }) => {
                     <InputField
                       placeholder="Shorten a link here..."
                       name="link"
-                      padding="1.5rem"
+                      padding={{ base: "1.5rem", md: "2rem" }}
                     ></InputField>
                   </Box>
 
@@ -65,8 +68,8 @@ export const Shrt: React.FC<ShrtProps> = ({ shortenLink }) => {
                       text="Shorten It!"
                       type="submit"
                       isLoading={isSubmitting}
-                      width="100%"
-                      padding="1.5rem"
+                      width={{ lg: "200px" }}
+                      padding={{ base: "1.5rem", md: "calc(2rem + 3px)" }}
                       height="55px"
                     ></ButtonComp>
                   </Box>

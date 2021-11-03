@@ -4,7 +4,7 @@ import { useField } from "formik";
 
 type InputFieldProps = InputHTMLAttributes<HTMLInputElement> & {
   name: string;
-  padding?: string;
+  padding?: any;
   mb?: string;
   w?: string;
   flex?: string;

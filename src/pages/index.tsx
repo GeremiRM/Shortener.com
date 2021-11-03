@@ -33,7 +33,7 @@ const Index: React.FC<{}> = ({}) => {
   };
 
   return (
-    <Box pt={10} fontSize={"18px"} fontFamily={"serif"}>
+    <Box pt={10} fontSize={{ base: "16px", lg: "18px" }} fontFamily={"serif"}>
       <NavBar />
       <Branding />
       <Box bg="hsl(257, 7%, 93%)" position={"relative"}>

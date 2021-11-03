@@ -6,7 +6,7 @@ interface ButtonProps {
   text: string;
   color: string;
   borderRadius?: string;
-  padding?: string;
+  padding?: any;
   fontWeight?: number;
   type?: "submit" | "button";
   disabled?: boolean;

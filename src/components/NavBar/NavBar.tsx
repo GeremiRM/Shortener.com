@@ -36,7 +36,11 @@ export const NavBar: React.FC<{}> = ({}) => {
           align={"center"}
           justifyContent={{ base: "space-between", sm: "flex-start" }}
         >
-          <Image src="images/logo.svg" alt="Shortly Logo" />
+          <Image
+            src="images/logo.svg"
+            alt="Shortly Logo"
+            width={{ lg: "160px" }}
+          />
           <Box flex={{ sm: "1" }} justify="center">
             <IconButton
               aria-label="Navigation Button"
@@ -49,7 +53,7 @@ export const NavBar: React.FC<{}> = ({}) => {
               flex="1"
               ml="2rem"
               display={{ base: "none", sm: "flex" }}
-              fontSize={{ base: "18px", sm: "14px" }}
+              fontSize={{ base: "18px", sm: "14px", lg: "18px" }}
               color="textGray"
               fontWeight={700}
             >

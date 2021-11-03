@@ -2,13 +2,13 @@ import React from "react";
 import { Box } from "@chakra-ui/react";
 
 interface WrapperProps {
-  width: string;
   px?: string;
-  py?: string;
-  bg?: string;
-  mx?: string;
 }
 
 export const Wrapper: React.FC<WrapperProps> = ({ children, ...props }) => {
-  return <Box {...props}>{children}</Box>;
+  return (
+    <Box width={{ base: "90%", lg: "80%" }} mx="auto" {...props}>
+      {children}
+    </Box>
+  );
 };

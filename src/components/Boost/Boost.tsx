@@ -16,7 +16,7 @@ export const Boost: React.FC<{}> = ({}) => {
           spacing={{ base: 5, md: 8 }}
           textAlign="center"
           color="white"
-          height={{ base: "300px", md: "250px" }}
+          height={{ base: "300px", sm: "200px" }}
           display="flex"
           direction="column"
           align="center"
