@@ -40,7 +40,7 @@ export const StatsCard: React.FC<StatsCardProps> = ({
         bg="white"
         w="100%"
         p="4.5rem 2rem 3rem"
-        spacing="2"
+        spacing={{ base: "5", xl: "2" }}
         borderRadius={12}
       >
         <Heading as="h3" fontWeight={700} fontSize="1.5rem" fontFamily="serif">
