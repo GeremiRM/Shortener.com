@@ -21,7 +21,12 @@ export const ShrtsListCard: React.FC<ShrtsListCardProps> = ({
       alignItems={{ md: "center" }}
       justifyContent={{ md: "space-between" }}
     >
-      <Text p="3.5" overflow={"hidden"} isTruncated>
+      <Text
+        p="3.5"
+        px={{ sm: "2.5rem", md: "3rem" }}
+        overflow={"hidden"}
+        isTruncated
+      >
         {original}
       </Text>
       <Flex
@@ -30,8 +35,16 @@ export const ShrtsListCard: React.FC<ShrtsListCardProps> = ({
         borderTop={{ base: "1px solid hsl(257, 7%, 85%)", md: "0" }}
         justify={{ sm: "space-between" }}
         align={{ sm: "center" }}
+        px={{ sm: "2.5rem", md: "3rem" }}
       >
-        <Text color="bgCyan" mb={{ base: "1rem", sm: "0" }} mr={{ md: "2rem" }}>
+        <Text
+          as="a"
+          href={shrt}
+          target="_blank"
+          color="bgCyan"
+          mb={{ base: "1rem", sm: "0" }}
+          mr={{ md: "2rem" }}
+        >
           {shrt}
         </Text>
         <Box onClick={onCopy}>
@@ -39,7 +52,7 @@ export const ShrtsListCard: React.FC<ShrtsListCardProps> = ({
             bgColor={`${hasCopied ? "bgDarkViolet" : "bgCyan"}`}
             text={`${hasCopied ? "Copied" : "Copy"}`}
             color="white"
-            width="100%"
+            width={{ sm: "125px" }}
           >
             {hasCopied ? "Copied" : "Copy"}
           </ButtonComp>

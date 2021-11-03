@@ -43,6 +43,7 @@ export const Stats: React.FC<{}> = ({}) => {
             color="hsl(257, 7%, 63%)"
             lineHeight="1.75rem"
             maxW={{ base: "450px", lg: "500px" }}
+            fontSize={{ xxl: "18px" }}
           >
             Track how your links are performing across the web with our advanced
             statistics dashboard

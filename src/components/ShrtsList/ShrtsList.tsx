@@ -22,8 +22,8 @@ export const ShrtsList: React.FC<ShrtsListProps> = ({ links }) => {
   return (
     <Wrapper>
       <Box
-        maxH="600px"
-        overflowY={"scroll"}
+        maxH={{ base: "600px", md: "300px" }}
+        overflowY={"auto"}
         mt="8"
         mb="3.5rem"
         boxShadow={"inner"}

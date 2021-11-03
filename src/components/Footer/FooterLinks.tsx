@@ -9,7 +9,13 @@ interface FooterLinksProps {
 export const FooterLinks: React.FC<FooterLinksProps> = ({ heading, list }) => {
   const renderList = () => {
     return list.map((item) => (
-      <ListItem as="a" href="#" key={item} display="block">
+      <ListItem
+        _hover={{ color: "bgCyan" }}
+        as="a"
+        href="#"
+        key={item}
+        display="block"
+      >
         {item}
       </ListItem>
     ));

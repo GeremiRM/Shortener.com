@@ -1,8 +1,16 @@
 import React from "react";
-import { Box, Flex, Heading, Grid, Image, Stack } from "@chakra-ui/react";
+import { Box, Flex, Heading, Grid, Stack, Icon } from "@chakra-ui/react";
 import { Wrapper } from "../Wrapper";
 import { FOOTER_LINKS } from "./FooterLinksList";
 import { FooterLinks } from "./FooterLinks";
+
+import {
+  AiFillFacebook,
+  AiOutlineTwitter,
+  AiOutlineInstagram,
+} from "react-icons/ai";
+
+import { FaPinterest } from "react-icons/fa";
 
 export const Footer: React.FC<{}> = ({}) => {
   const renderLinks = () => {
@@ -29,7 +37,7 @@ export const Footer: React.FC<{}> = ({}) => {
         >
           <Heading
             as="h3"
-            fontSize="2rem"
+            fontSize={{ base: "2rem", xxl: "3rem" }}
             fontFamily={"Poppins"}
             fontWeight="700"
             py="1rem"
@@ -53,10 +61,34 @@ export const Footer: React.FC<{}> = ({}) => {
               mx="auto"
               spacing={{ base: "1.75rem", lg: "1.25rem" }}
             >
-              <Image href="#" src="/images/icon-facebook.svg" />
-              <Image href="#" src="/images/icon-twitter.svg" />
-              <Image href="#" src="/images/icon-pinterest.svg" />
-              <Image href="#" src="/images/icon-instagram.svg" />
+              <Icon
+                height="30px"
+                width="30px"
+                as={AiFillFacebook}
+                color="white"
+                _hover={{ color: "bgCyan", cursor: "pointer" }}
+              />
+              <Icon
+                height="30px"
+                width="30px"
+                as={AiOutlineTwitter}
+                color="white"
+                _hover={{ color: "bgCyan", cursor: "pointer" }}
+              />
+              <Icon
+                height="30px"
+                width="30px"
+                as={FaPinterest}
+                color="white"
+                _hover={{ color: "bgCyan", cursor: "pointer" }}
+              />
+              <Icon
+                height="30px"
+                width="30px"
+                as={AiOutlineInstagram}
+                color="white"
+                _hover={{ color: "bgCyan", cursor: "pointer" }}
+              />
             </Stack>
           </Grid>
         </Flex>

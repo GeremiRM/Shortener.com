@@ -14,12 +14,12 @@ export const Branding: React.FC<{}> = ({}) => {
     >
       <Box
         bg="url(../images/illustration-working.svg) no-repeat"
-        bgSize={{ base: "contain", md: "cover" }}
+        bgSize={{ base: "contain", md: "cover", xxl: "contain" }}
         bgPosition={{ base: "right", md: "left" }}
         position="relative"
         left={{ base: "5%", md: "0" }}
-        w={{ base: "450px", md: "800px", xl: "70vw" }}
-        minH={{ base: "300px", md: "none", xl: "500px" }}
+        w={{ base: "450px", md: "800px", xxl: "80vw" }}
+        minH={{ base: "300px", md: "none", xxl: "500px" }}
         mx="auto"
         zIndex={-1}
       ></Box>

@@ -23,6 +23,7 @@ export const StatsCard: React.FC<StatsCardProps> = ({
       maxW={{ base: "500px" }}
       mt={{ xl: `calc(2rem * ${idx})` }}
       borderRadius={12}
+      boxShadow="md"
     >
       <Box
         bg="bgDarkViolet"
@@ -31,10 +32,10 @@ export const StatsCard: React.FC<StatsCardProps> = ({
         width={"fit-content"}
         position={"absolute"}
         top="-2.5rem"
-        left={{ xl: "10%" }}
+        left={{ xl: "8%" }}
         maxW="80px"
       >
-        <Image src={img}></Image>
+        <Image src={img} />
       </Box>
       <Stack
         bg="white"
@@ -43,13 +44,19 @@ export const StatsCard: React.FC<StatsCardProps> = ({
         spacing={{ base: "5", xl: "2" }}
         borderRadius={12}
       >
-        <Heading as="h3" fontWeight={700} fontSize="1.5rem" fontFamily="serif">
+        <Heading
+          as="h3"
+          fontWeight={700}
+          fontSize={{ base: "1.5rem", xxl: "2rem" }}
+          fontFamily="serif"
+        >
           {heading}
         </Heading>
         <Text
-          fontSize={{ base: "16px" }}
-          lineHeight={"1.75rem"}
+          fontSize={{ base: "16px", xxl: "18px" }}
+          lineHeight={{ base: "1.75rem", xxl: "2rem" }}
           color="hsl(257, 7%, 63%)"
+          pr={{ xxl: "6rem" }}
         >
           {desc}
         </Text>

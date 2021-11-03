@@ -18,7 +18,7 @@ interface ButtonProps {
 
 export const ButtonComp: React.FC<ButtonProps> = ({ text, ...props }) => {
   return (
-    <Button {...props} fontSize="18px">
+    <Button {...props} _hover={{ bg: "hsl(180, 66%, 69%)" }} fontSize="18px">
       {text}
     </Button>
   );

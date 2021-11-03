@@ -39,7 +39,7 @@ export const NavBar: React.FC<{}> = ({}) => {
           <Image
             src="images/logo.svg"
             alt="Shortly Logo"
-            width={{ lg: "12vw" }}
+            width={{ lg: "160px" }}
           />
           <Box flex={{ sm: "1" }} justify="center">
             <IconButton
@@ -53,7 +53,7 @@ export const NavBar: React.FC<{}> = ({}) => {
               flex="1"
               ml="2rem"
               display={{ base: "none", sm: "flex" }}
-              fontSize={{ base: "18px", sm: "14px", xl: "1.25vw" }}
+              fontSize={{ base: "18px", sm: "14px", lg: "18px" }}
               color="textGray"
               fontWeight={700}
             >

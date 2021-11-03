@@ -30,6 +30,7 @@ export const InputField: React.FC<InputFieldProps> = ({
         }}
         border={"3px solid transparent"}
         pl="0.75rem"
+        fontSize="18px"
       />
       {error ? (
         <FormErrorMessage
