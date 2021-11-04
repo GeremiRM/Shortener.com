@@ -1,6 +1,6 @@
 import React, { useEffect } from "react";
 import { Box, Heading, Text, Stack, Grid } from "@chakra-ui/react";
-import { Wrapper } from "../Wrapper";
+import { Wrapper } from "../General/Wrapper";
 import { StatsCard } from "./StatsCard";
 
 import { CARDS_INFO } from "./StatsCardsInfo";
@@ -56,7 +56,8 @@ export const Stats: React.FC<{}> = ({}) => {
               top={{ base: "10%", lg: "55%" }}
               left={{ base: "calc(50% - 4px)", lg: "0" }}
               bg={"bgCyan"}
-              data-aos="slide-up"
+              data-aos="fade"
+              data-aos-delay="1000"
             ></Box>
             <Grid
               gridTemplateColumns={{ base: "1fr", lg: "repeat(3, 1fr)" }}

@@ -1,7 +1,7 @@
 import React from "react";
 import { Box, Stack, Heading } from "@chakra-ui/react";
-import { Wrapper } from "../Wrapper";
-import { ButtonComp } from "../ButtonComp";
+import { Wrapper } from "../General/Wrapper";
+import { ButtonComp } from "../General/ButtonComp";
 
 export const Boost: React.FC<{}> = ({}) => {
   return (

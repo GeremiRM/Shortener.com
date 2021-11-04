@@ -1,9 +1,9 @@
 import React from "react";
 import { Box, Flex } from "@chakra-ui/react";
-import { Wrapper } from "../Wrapper";
+import { Wrapper } from "../General/Wrapper";
 import { Form, Formik } from "formik";
-import { InputField } from "../InputField";
-import { ButtonComp } from "../ButtonComp";
+import { InputField } from "../General/InputField";
+import { ButtonComp } from "../General/ButtonComp";
 
 interface ShrtProps {
   shortenLink: (link: string) => void;

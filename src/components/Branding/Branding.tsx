@@ -1,6 +1,6 @@
 import React from "react";
 import { Box, Text, Heading, Stack, Flex } from "@chakra-ui/react";
-import { ButtonComp } from "../ButtonComp";
+import { ButtonComp } from "../General/ButtonComp";
 
 export const Branding: React.FC<{}> = ({}) => {
   return (

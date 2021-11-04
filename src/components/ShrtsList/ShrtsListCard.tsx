@@ -1,6 +1,6 @@
 import React from "react";
 import { Box, Text, Flex, useClipboard } from "@chakra-ui/react";
-import { ButtonComp } from "../ButtonComp";
+import { ButtonComp } from "../General/ButtonComp";
 
 interface ShrtsListCardProps {
   original: string;

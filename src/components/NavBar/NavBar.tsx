@@ -12,22 +12,52 @@ import {
   Image,
 } from "@chakra-ui/react";
 import { HamburgerIcon, CloseIcon } from "@chakra-ui/icons";
-import { Wrapper } from "../Wrapper";
+import { Wrapper } from "../General/Wrapper";
 
 const NavLinks = ["Features", "Pricing", "Resources"];
 
-const NavLink = ({ children }: { children: ReactNode }) => (
-  <Link _hover={{ color: "hsl(255, 11%, 22%)" }} href="#">
-    {children}
-  </Link>
-);
+const hoverStyle = {
+  color: { base: "hsl(255, 11%, 60%)", sm: "hsl(255, 11%, 22%)" },
+};
 
 export const NavBar: React.FC<{}> = ({}) => {
   const { isOpen, onOpen, onClose } = useDisclosure();
 
+  const NavLink = ({ children }: { children: ReactNode }) => (
+    <Link _hover={hoverStyle} href="#">
+      {children}
+    </Link>
+  );
+
   const renderLinks = (links: Array<string>) => {
     return links.map((link) => <NavLink key={link}>{link}</NavLink>);
   };
+
+  const userLinks = (
+    <Flex
+      align="center"
+      justify="center"
+      ml={{ sm: "auto" }}
+      direction={{ base: "column", sm: "row" }}
+      mt={{ base: 5, sm: 0 }}
+    >
+      <Box mb={{ base: 5, sm: 0 }} mr={{ sm: 5, md: 8 }}>
+        <NavLink>Login</NavLink>
+      </Box>
+
+      <Link
+        href="#"
+        p={{ base: "0.5rem 1rem", sm: "0.5rem 1.5rem" }}
+        bg={"bgCyan"}
+        borderRadius={50}
+        color="white"
+        _hover={{ bg: "hsl(180, 66%, 69%)" }}
+        width={{ base: "100%", sm: "initial" }}
+      >
+        Sign Up
+      </Link>
+    </Flex>
+  );
 
   return (
     <Box>
@@ -58,35 +88,14 @@ export const NavBar: React.FC<{}> = ({}) => {
               fontWeight={700}
             >
               <HStack
-                spacing={{ base: 5, md: 8 }}
+                spacing={{ sm: 5, md: 8 }}
                 display="flex"
                 align="center"
                 justify="center"
               >
                 {renderLinks(NavLinks)}
               </HStack>
-              <HStack
-                spacing={{ base: 5, md: 8 }}
-                display="flex"
-                align="center"
-                justify="center"
-                ml="auto"
-              >
-                <Link _hover={{ color: "hsl(255, 11%, 22%)" }} href="#">
-                  Login
-                </Link>
-                <Link
-                  href="#"
-                  display="block"
-                  p={{ base: "0.5rem 1rem", sm: "0.5rem 1.5rem" }}
-                  bg={"bgCyan"}
-                  borderRadius={50}
-                  color="white"
-                  _hover={{ bg: "hsl(180, 66%, 69%)" }}
-                >
-                  Sign Up
-                </Link>
-              </HStack>
+              {userLinks}
             </Flex>
 
             {isOpen ? (
@@ -105,23 +114,12 @@ export const NavBar: React.FC<{}> = ({}) => {
                 borderRadius={12}
                 textAlign="center"
                 p={10}
-                fontFamily={"inherit"}
+                zIndex={100}
               >
                 <Stack spacing={6} mb={8}>
                   {renderLinks(NavLinks)}
                 </Stack>
-                <Stack spacing={6} mt={8}>
-                  <Link href="#">Login</Link>
-                  <Link
-                    href="#"
-                    display="block"
-                    p={"2"}
-                    bg={"bgCyan"}
-                    borderRadius={50}
-                  >
-                    Sign Up
-                  </Link>
-                </Stack>
+                {userLinks}
               </Stack>
             ) : null}
           </Box>
