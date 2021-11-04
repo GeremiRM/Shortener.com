@@ -37,8 +37,8 @@ export const Shrt: React.FC<ShrtProps> = ({ shortenLink }) => {
           {({ isSubmitting }) => (
             <Box
               bg={{
-                base: "url('/images/bg-shorten-mobile.svg') no-repeat top right",
-                md: "url('/images/bg-shorten-desktop.svg') no-repeat top left/cover",
+                base: "url('/bg/shorten-mobile.svg') no-repeat top right",
+                md: "url('/bg/shorten-desktop.svg') no-repeat top left/cover",
               }}
               backgroundColor={{ base: "bgDarkViolet", md: "bgDarkViolet" }}
               p={{ base: "1.5rem", sm: "2rem", lg: "2.5rem 3.5rem" }}

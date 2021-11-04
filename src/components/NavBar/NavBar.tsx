@@ -11,6 +11,7 @@ import {
   HStack,
   Image,
 } from "@chakra-ui/react";
+
 import { HamburgerIcon, CloseIcon } from "@chakra-ui/icons";
 import { Wrapper } from "../General/Wrapper";
 

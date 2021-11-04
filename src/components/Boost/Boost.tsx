@@ -7,8 +7,8 @@ export const Boost: React.FC<{}> = ({}) => {
   return (
     <Box
       bg={{
-        base: "url(/images/bg-boost-mobile.svg) left/cover no-repeat  hsl(257, 27%, 26%)",
-        md: "url(/images/bg-boost-desktop.svg) left/cover no-repeat  hsl(257, 27%, 26%)",
+        base: "url(/bg/boost-mobile.svg) left/cover no-repeat  hsl(257, 27%, 26%)",
+        md: "url(/bg/boost-desktop.svg) left/cover no-repeat  hsl(257, 27%, 26%)",
       }}
     >
       <Wrapper>
