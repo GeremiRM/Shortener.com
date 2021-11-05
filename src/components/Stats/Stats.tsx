@@ -15,7 +15,7 @@ export const Stats: React.FC<{}> = ({}) => {
         key={card.heading}
         position="relative"
         mt={20}
-        data-aos={`${idx % 2 === 0 ? "slide-left" : "slide-right"}`}
+        data-aos={`${idx % 2 === 0 ? "flip-left" : "flip-right"}`}
       >
         <StatsCard {...card} idx={idx} />
       </Box>

@@ -52,7 +52,7 @@ export const ShrtsListCard: React.FC<ShrtsListCardProps> = ({
             bgColor={`${hasCopied ? "bgDarkViolet" : "bgCyan"}`}
             text={`${hasCopied ? "Copied" : "Copy"}`}
             color="white"
-            width={{ sm: "125px" }}
+            width={{ base: "100%", sm: "125px" }}
           >
             {hasCopied ? "Copied" : "Copy"}
           </ButtonComp>
