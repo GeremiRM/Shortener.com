@@ -54,7 +54,7 @@ export const Footer: React.FC<{}> = ({}) => {
               align={{ sm: "center", lg: "flex-start" }}
               justify={"space-evenly"}
               pt="4rem"
-              pb={{ base: "1.5rem", sm: "0`" }}
+              pb={{ base: "1.5rem", sm: "0" }}
               direction={{ sm: "column", lg: "row" }}
               width="40%"
               maxW={"400px"}

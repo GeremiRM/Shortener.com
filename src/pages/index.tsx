@@ -6,7 +6,7 @@ import { Box } from "@chakra-ui/react";
 import { NavBar } from "../components/NavBar/NarBar";
 import { Branding } from "../components/Branding/Branding";
 import { Shrt } from "../components/Shrt/Shrt";
-import { ShrtsList } from "../components/ShrtsList/ShirtsList";
+import { ShrtsList } from "../components/ShrtsList/ShrtsList";
 import { Stats } from "../components/Stats/Stats";
 import { Footer } from "../components/Footer/Footer";
 import { Boost } from "../components/Boost/Boost";
