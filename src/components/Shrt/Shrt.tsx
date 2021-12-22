@@ -1,5 +1,4 @@
-import React from "react";
-import { Box, Flex } from "@chakra-ui/react";
+import { Box, Flex, useToast } from "@chakra-ui/react";
 import { Wrapper } from "../General/Wrapper";
 import { Form, Formik } from "formik";
 import { InputField } from "../General/InputField";
@@ -13,6 +12,8 @@ const LINK_RGX =
   /(https?:\/\/(?:www\.|(?!www))[a-zA-Z0-9][a-zA-Z0-9-]+[a-zA-Z0-9]\.[^\s]{2,}|www\.[a-zA-Z0-9][a-zA-Z0-9-]+[a-zA-Z0-9]\.[^\s]{2,}|https?:\/\/(?:www\.|(?!www))[a-zA-Z0-9]+\.[^\s]{2,}|www\.[a-zA-Z0-9]+\.[^\s]{2,})/;
 
 export const Shrt: React.FC<ShrtProps> = ({ shortenLink }) => {
+  const toast = useToast();
+
   return (
     <Box bg={"linear-gradient(180deg, white 50%, hsl(257, 7%, 93%) 50%);"}>
       <Wrapper>
@@ -31,6 +32,13 @@ export const Shrt: React.FC<ShrtProps> = ({ shortenLink }) => {
           }}
           onSubmit={({ link }, { setSubmitting }) => {
             shortenLink(link);
+            toast({
+              title: "Success!",
+              description: "Link shortened successfully",
+              duration: 3000,
+              status: "success",
+              isClosable: true,
+            });
             setSubmitting(false);
           }}
         >

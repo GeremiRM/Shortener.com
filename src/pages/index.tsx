@@ -31,8 +31,10 @@ const Index: React.FC<{}> = ({}) => {
     const response = await fetch(
       `https://api.shrtco.de/v2/shorten?url=${link}`
     ).catch(() => alert("ERROR"));
+
     if (response) {
       const data = await response.json();
+
       if (data.hasOwnProperty("result")) {
         const shortenedLink = data.result.full_short_link;
         const newLinks: Links = {
